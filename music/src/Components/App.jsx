@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css'
-import MusicList from './MusicList/MusicList';
+import MusicSong from './MusicSong/MusicSong';
 import axios from 'axios';
 import TitleBar from './TitleBar/TitleBar';
 import PageFooter from './PageFooter/PageFooter';
@@ -31,7 +31,7 @@ class App extends Component {
             <React.Fragment>
                 <div className="my-component">
                 <TitleBar/>
-                <MusicList/>
+                <MusicSong/>
                 <PageFooter/>
                 </div>
             </React.Fragment>

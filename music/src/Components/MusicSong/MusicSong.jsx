@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
-import './MusicSong.css'
+import '../MusicSong/MusicSong.css'
 import CreateSong from '../CreateSong/CreateSong';
 
 class MusicList extends Component {
@@ -95,4 +95,4 @@ class MusicList extends Component {
     }
 }
  
-export default MusicList;
+export default MusicSong;
