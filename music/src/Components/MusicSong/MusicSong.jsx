@@ -3,7 +3,7 @@ import axios from "axios";
 import '../MusicSong/MusicSong.css'
 import CreateSong from '../CreateSong/CreateSong';
 
-class MusicList extends Component {
+class MusicSong extends Component {
     constructor(props) {
         super(props);
         this.state = { 
