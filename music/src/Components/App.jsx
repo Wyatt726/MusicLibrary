@@ -26,7 +26,7 @@ class App extends Component {
     
     async getSongs() {
         try{
-          let response = await axios.get("http://www.devcodecampmusiclibrary.com/api/music/");
+          let response = await axios.get("http://localhost:3000/api/songs");
           // console.log(response.data)
           this.setState({
             info: response.data 
@@ -35,7 +35,11 @@ class App extends Component {
         catch (error) {
           console.log("API request error");
         }
-      } 
+    
+      }
+      
+      
+
 
 
     render() { 
