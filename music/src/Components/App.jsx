@@ -7,23 +7,35 @@ import PageFooter from './PageFooter/PageFooter';
 
 
 class App extends Component {
-    constructor(props) {
+    constructor (props){
         super(props);
-        this.state = { 
-            songs: []
-         }
+        this.info = [
+  
+        ];
+  
+        this.state = {
+            
+            filter : {title: '', album: '', artist: ''},
+            genre: '', releaseDate: ''
+        };
     }
 
     componentDidMount(){
         this.getSongs()
     }
     
-    async getSongs(){
-        let response = await axios.get('http://127.0.0.1:8000/music/')
-        this.setState({
-            songs: response.data
-        })
-    }
+    async getSongs() {
+        try{
+          let response = await axios.get("http://www.devcodecampmusiclibrary.com/api/music/");
+          // console.log(response.data)
+          this.setState({
+            info: response.data 
+          })
+        }
+        catch (error) {
+          console.log("API request error");
+        }
+      } 
 
 
     render() { 
