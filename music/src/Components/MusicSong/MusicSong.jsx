@@ -18,18 +18,18 @@ class MusicSong extends Component {
     }
     
     async getSongs(){
-        let response = await axios.get('http://127.0.0.1:8000/music/')
+        let response = await axios.get('http://localhost:3000/api/songs')
         this.setState({
             songs: response.data
         })
     }
 
     async createSong(newSong){
-        let response = await axios.post('http://127.0.0.1:8000/music/', newSong)
+        let response = await axios.post('http://localhost:3000/api/songs', newSong)
     }
 
     async deleteSong(element){
-        let response =  await axios.delete('http://127.0.0.1:8000/music/'+element.id+'/')
+        let response =  await axios.delete('http://localhost:3000/api/songs'+element.id+'/')
         this.getSongs()
     }
 
